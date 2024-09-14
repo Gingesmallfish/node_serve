@@ -16,6 +16,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+const loginRouter = require('./router/login')
+app.use('/api', loginRouter);
+
+
 app.listen(3007, () => {
-  console.log(`http://localhost:3007`);
+  console.log(`http://127.0.0.1:3007`);
 })
